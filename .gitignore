@@ -1,0 +1,16 @@
+# dependencies (not needed, but ignore if you run tooling locally)
+node_modules/
+
+# local demo / user designs (keep the skill repo clean)
+ui-designer-demo/
+designs/
+**/export/
+
+# editor & OS noise
+.DS_Store
+Thumbs.db
+*.log
+
+# local agent queue (already ignored per design dir, keep this as a safety net)
+.ai/inbox/
+.ai/outbox/

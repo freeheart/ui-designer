@@ -1,0 +1,1703 @@
+{
+  "version": 1,
+  "name": "示例：钱包首页",
+  "theme": {
+    "font": "system-ui",
+    "colors": {
+      "bg": "#0b0f17",
+      "surface": "#111827",
+      "surface2": "#1b2436",
+      "text": "#e5e7eb",
+      "muted": "#94a3b8",
+      "primary": "#6366f1",
+      "onPrimary": "#ffffff",
+      "border": "#263244",
+      "success": "#22c55e",
+      "warning": "#f59e0b",
+      "danger": "#ef4444"
+    },
+    "radius": {
+      "sm": 4,
+      "md": 8,
+      "lg": 12,
+      "xl": 20,
+      "full": 999
+    },
+    "space": {
+      "xs": 4,
+      "sm": 8,
+      "md": 16,
+      "lg": 24,
+      "xl": 32,
+      "2xl": 48
+    },
+    "fontSize": {
+      "xs": 12,
+      "sm": 13,
+      "md": 15,
+      "lg": 18,
+      "xl": 24,
+      "2xl": 32
+    },
+    "shadow": {
+      "sm": "0 1px 2px rgba(0,0,0,.25)",
+      "md": "0 8px 24px rgba(0,0,0,.28)",
+      "lg": "0 24px 64px rgba(0,0,0,.4)"
+    }
+  },
+  "frames": [
+    {
+      "id": "f-main",
+      "name": "首页",
+      "x": 0,
+      "y": 0,
+      "width": 390,
+      "height": 844,
+      "background": "bg"
+    }
+  ],
+  "rootIds": {
+    "f-main": "n-54"
+  },
+  "nodes": {
+    "n-01": {
+      "id": "n-01",
+      "type": "text",
+      "name": "问候",
+      "parent": "n-05",
+      "children": [],
+      "x": 20,
+      "y": 20,
+      "w": 200,
+      "h": 18,
+      "opacity": 1,
+      "hidden": false,
+      "locked": false,
+      "layout": {
+        "mode": "absolute",
+        "gap": 0,
+        "padding": 0,
+        "align": "start",
+        "justify": "start"
+      },
+      "style": {
+        "font": {
+          "size": "sm",
+          "color": "muted"
+        }
+      },
+      "props": {
+        "text": "早上好"
+      }
+    },
+    "n-02": {
+      "id": "n-02",
+      "type": "text",
+      "name": "用户名",
+      "parent": "n-05",
+      "children": [],
+      "x": 20,
+      "y": 42,
+      "w": 220,
+      "h": 26,
+      "opacity": 1,
+      "hidden": false,
+      "locked": false,
+      "layout": {
+        "mode": "absolute",
+        "gap": 0,
+        "padding": 0,
+        "align": "start",
+        "justify": "start"
+      },
+      "style": {
+        "font": {
+          "size": "xl",
+          "weight": 700,
+          "color": "text"
+        }
+      },
+      "props": {
+        "text": "林小满"
+      }
+    },
+    "n-03": {
+      "id": "n-03",
+      "type": "icon",
+      "name": "通知",
+      "parent": "n-05",
+      "children": [],
+      "x": 292,
+      "y": 36,
+      "w": 24,
+      "h": 24,
+      "opacity": 1,
+      "hidden": false,
+      "locked": false,
+      "layout": {
+        "mode": "absolute",
+        "gap": 0,
+        "padding": 0,
+        "align": "start",
+        "justify": "start"
+      },
+      "style": {
+        "font": {
+          "color": "muted"
+        }
+      },
+      "props": {
+        "name": "bell"
+      }
+    },
+    "n-04": {
+      "id": "n-04",
+      "type": "avatar",
+      "name": "头像",
+      "parent": "n-05",
+      "children": [],
+      "x": 322,
+      "y": 28,
+      "w": 48,
+      "h": 48,
+      "opacity": 1,
+      "hidden": false,
+      "locked": false,
+      "layout": {
+        "mode": "absolute",
+        "gap": 0,
+        "padding": 0,
+        "align": "start",
+        "justify": "start"
+      },
+      "style": {
+        "fill": "surface2"
+      },
+      "props": {
+        "initials": "LM"
+      }
+    },
+    "n-05": {
+      "id": "n-05",
+      "type": "box",
+      "name": "顶部栏",
+      "parent": "n-54",
+      "children": [
+        "n-01",
+        "n-02",
+        "n-03",
+        "n-04"
+      ],
+      "x": 0,
+      "y": 0,
+      "w": 390,
+      "h": 96,
+      "opacity": 1,
+      "hidden": false,
+      "locked": false,
+      "layout": {
+        "mode": "absolute"
+      },
+      "style": {
+        "fill": "surface"
+      },
+      "props": {}
+    },
+    "n-06": {
+      "id": "n-06",
+      "type": "text",
+      "name": "资产标签",
+      "parent": "n-13",
+      "children": [],
+      "x": 20,
+      "y": 18,
+      "w": 220,
+      "h": 18,
+      "opacity": 1,
+      "hidden": false,
+      "locked": false,
+      "layout": {
+        "mode": "absolute",
+        "gap": 0,
+        "padding": 0,
+        "align": "start",
+        "justify": "start"
+      },
+      "style": {
+        "font": {
+          "size": "xs",
+          "color": "muted"
+        }
+      },
+      "props": {
+        "text": "总资产 (CNY)"
+      }
+    },
+    "n-07": {
+      "id": "n-07",
+      "type": "text",
+      "name": "资产金额",
+      "parent": "n-13",
+      "children": [],
+      "x": 20,
+      "y": 42,
+      "w": 280,
+      "h": 40,
+      "opacity": 1,
+      "hidden": false,
+      "locked": false,
+      "layout": {
+        "mode": "absolute",
+        "gap": 0,
+        "padding": 0,
+        "align": "start",
+        "justify": "start"
+      },
+      "style": {
+        "font": {
+          "size": "2xl",
+          "weight": 700,
+          "color": "text"
+        }
+      },
+      "props": {
+        "text": "¥ 128,600.00"
+      }
+    },
+    "n-08": {
+      "id": "n-08",
+      "type": "badge",
+      "name": "涨幅",
+      "parent": "n-13",
+      "children": [],
+      "x": 20,
+      "y": 96,
+      "w": 84,
+      "h": 24,
+      "opacity": 1,
+      "hidden": false,
+      "locked": false,
+      "layout": {
+        "mode": "absolute",
+        "gap": 0,
+        "padding": 0,
+        "align": "start",
+        "justify": "start"
+      },
+      "style": {},
+      "props": {
+        "text": "+12.4%",
+        "tone": "success"
+      }
+    },
+    "n-09": {
+      "id": "n-09",
+      "type": "text",
+      "name": "涨幅说明",
+      "parent": "n-13",
+      "children": [],
+      "x": 116,
+      "y": 102,
+      "w": 120,
+      "h": 16,
+      "opacity": 1,
+      "hidden": false,
+      "locked": false,
+      "layout": {
+        "mode": "absolute",
+        "gap": 0,
+        "padding": 0,
+        "align": "start",
+        "justify": "start"
+      },
+      "style": {
+        "font": {
+          "size": "xs",
+          "color": "muted"
+        }
+      },
+      "props": {
+        "text": "较上月"
+      }
+    },
+    "n-10": {
+      "id": "n-10",
+      "type": "divider",
+      "name": "分隔线",
+      "parent": "n-13",
+      "children": [],
+      "x": 20,
+      "y": 136,
+      "w": 310,
+      "h": 1,
+      "opacity": 1,
+      "hidden": false,
+      "locked": false,
+      "layout": {
+        "mode": "absolute",
+        "gap": 0,
+        "padding": 0,
+        "align": "start",
+        "justify": "start"
+      },
+      "style": {},
+      "props": {}
+    },
+    "n-11": {
+      "id": "n-11",
+      "type": "chart",
+      "name": "趋势",
+      "parent": "n-13",
+      "children": [],
+      "x": 228,
+      "y": 84,
+      "w": 100,
+      "h": 48,
+      "opacity": 1,
+      "hidden": false,
+      "locked": false,
+      "layout": {
+        "mode": "absolute",
+        "gap": 0,
+        "padding": 0,
+        "align": "start",
+        "justify": "start"
+      },
+      "style": {},
+      "props": {
+        "kind": "bar",
+        "data": [
+          6,
+          10,
+          8,
+          14,
+          11,
+          18
+        ],
+        "color": "primary"
+      }
+    },
+    "n-12": {
+      "id": "n-12",
+      "type": "text",
+      "name": "收益说明",
+      "parent": "n-13",
+      "children": [],
+      "x": 20,
+      "y": 148,
+      "w": 310,
+      "h": 16,
+      "opacity": 1,
+      "hidden": false,
+      "locked": false,
+      "layout": {
+        "mode": "absolute",
+        "gap": 0,
+        "padding": 0,
+        "align": "start",
+        "justify": "start"
+      },
+      "style": {
+        "font": {
+          "size": "xs",
+          "color": "muted"
+        }
+      },
+      "props": {
+        "text": "本月收益 ¥ 1,240 · 4 笔交易"
+      }
+    },
+    "n-13": {
+      "id": "n-13",
+      "type": "card",
+      "name": "资产卡片",
+      "parent": "n-54",
+      "children": [
+        "n-06",
+        "n-07",
+        "n-08",
+        "n-09",
+        "n-10",
+        "n-11",
+        "n-12"
+      ],
+      "x": 20,
+      "y": 116,
+      "w": 350,
+      "h": 168,
+      "opacity": 1,
+      "hidden": false,
+      "locked": false,
+      "layout": {
+        "mode": "absolute",
+        "gap": 0,
+        "padding": 0,
+        "align": "start",
+        "justify": "start"
+      },
+      "style": {
+        "fill": "surface",
+        "radius": "lg",
+        "stroke": {
+          "color": "border",
+          "width": 1
+        }
+      },
+      "props": {}
+    },
+    "n-14": {
+      "id": "n-14",
+      "type": "icon",
+      "name": "转账图标",
+      "parent": "n-16",
+      "children": [],
+      "x": 27,
+      "y": 12,
+      "w": 24,
+      "h": 24,
+      "opacity": 1,
+      "hidden": false,
+      "locked": false,
+      "layout": {
+        "mode": "absolute",
+        "gap": 0,
+        "padding": 0,
+        "align": "start",
+        "justify": "start"
+      },
+      "style": {
+        "font": {
+          "color": "primary"
+        }
+      },
+      "props": {
+        "name": "arrow-right"
+      }
+    },
+    "n-15": {
+      "id": "n-15",
+      "type": "text",
+      "name": "转账文字",
+      "parent": "n-16",
+      "children": [],
+      "x": 0,
+      "y": 44,
+      "w": 78,
+      "h": 16,
+      "opacity": 1,
+      "hidden": false,
+      "locked": false,
+      "layout": {
+        "mode": "absolute",
+        "gap": 0,
+        "padding": 0,
+        "align": "start",
+        "justify": "start"
+      },
+      "style": {
+        "font": {
+          "size": "xs",
+          "color": "muted",
+          "align": "center"
+        }
+      },
+      "props": {
+        "text": "转账"
+      }
+    },
+    "n-16": {
+      "id": "n-16",
+      "type": "box",
+      "name": "转账",
+      "parent": "n-26",
+      "children": [
+        "n-14",
+        "n-15"
+      ],
+      "x": 0,
+      "y": 0,
+      "w": 78,
+      "h": 72,
+      "opacity": 1,
+      "hidden": false,
+      "locked": false,
+      "layout": {
+        "mode": "absolute",
+        "gap": 0,
+        "padding": 0,
+        "align": "start",
+        "justify": "start"
+      },
+      "style": {
+        "fill": "surface",
+        "radius": "md",
+        "stroke": {
+          "color": "border",
+          "width": 1
+        }
+      },
+      "props": {}
+    },
+    "n-17": {
+      "id": "n-17",
+      "type": "icon",
+      "name": "报表图标",
+      "parent": "n-19",
+      "children": [],
+      "x": 27,
+      "y": 12,
+      "w": 24,
+      "h": 24,
+      "opacity": 1,
+      "hidden": false,
+      "locked": false,
+      "layout": {
+        "mode": "absolute",
+        "gap": 0,
+        "padding": 0,
+        "align": "start",
+        "justify": "start"
+      },
+      "style": {
+        "font": {
+          "color": "primary"
+        }
+      },
+      "props": {
+        "name": "chart"
+      }
+    },
+    "n-18": {
+      "id": "n-18",
+      "type": "text",
+      "name": "报表文字",
+      "parent": "n-19",
+      "children": [],
+      "x": 0,
+      "y": 44,
+      "w": 78,
+      "h": 16,
+      "opacity": 1,
+      "hidden": false,
+      "locked": false,
+      "layout": {
+        "mode": "absolute",
+        "gap": 0,
+        "padding": 0,
+        "align": "start",
+        "justify": "start"
+      },
+      "style": {
+        "font": {
+          "size": "xs",
+          "color": "muted",
+          "align": "center"
+        }
+      },
+      "props": {
+        "text": "报表"
+      }
+    },
+    "n-19": {
+      "id": "n-19",
+      "type": "box",
+      "name": "报表",
+      "parent": "n-26",
+      "children": [
+        "n-17",
+        "n-18"
+      ],
+      "x": 90,
+      "y": 0,
+      "w": 78,
+      "h": 72,
+      "opacity": 1,
+      "hidden": false,
+      "locked": false,
+      "layout": {
+        "mode": "absolute",
+        "gap": 0,
+        "padding": 0,
+        "align": "start",
+        "justify": "start"
+      },
+      "style": {
+        "fill": "surface",
+        "radius": "md",
+        "stroke": {
+          "color": "border",
+          "width": 1
+        }
+      },
+      "props": {}
+    },
+    "n-20": {
+      "id": "n-20",
+      "type": "icon",
+      "name": "联系人图标",
+      "parent": "n-22",
+      "children": [],
+      "x": 27,
+      "y": 12,
+      "w": 24,
+      "h": 24,
+      "opacity": 1,
+      "hidden": false,
+      "locked": false,
+      "layout": {
+        "mode": "absolute",
+        "gap": 0,
+        "padding": 0,
+        "align": "start",
+        "justify": "start"
+      },
+      "style": {
+        "font": {
+          "color": "primary"
+        }
+      },
+      "props": {
+        "name": "user"
+      }
+    },
+    "n-21": {
+      "id": "n-21",
+      "type": "text",
+      "name": "联系人文字",
+      "parent": "n-22",
+      "children": [],
+      "x": 0,
+      "y": 44,
+      "w": 78,
+      "h": 16,
+      "opacity": 1,
+      "hidden": false,
+      "locked": false,
+      "layout": {
+        "mode": "absolute",
+        "gap": 0,
+        "padding": 0,
+        "align": "start",
+        "justify": "start"
+      },
+      "style": {
+        "font": {
+          "size": "xs",
+          "color": "muted",
+          "align": "center"
+        }
+      },
+      "props": {
+        "text": "联系人"
+      }
+    },
+    "n-22": {
+      "id": "n-22",
+      "type": "box",
+      "name": "联系人",
+      "parent": "n-26",
+      "children": [
+        "n-20",
+        "n-21"
+      ],
+      "x": 180,
+      "y": 0,
+      "w": 78,
+      "h": 72,
+      "opacity": 1,
+      "hidden": false,
+      "locked": false,
+      "layout": {
+        "mode": "absolute",
+        "gap": 0,
+        "padding": 0,
+        "align": "start",
+        "justify": "start"
+      },
+      "style": {
+        "fill": "surface",
+        "radius": "md",
+        "stroke": {
+          "color": "border",
+          "width": 1
+        }
+      },
+      "props": {}
+    },
+    "n-23": {
+      "id": "n-23",
+      "type": "icon",
+      "name": "设置图标",
+      "parent": "n-25",
+      "children": [],
+      "x": 27,
+      "y": 12,
+      "w": 24,
+      "h": 24,
+      "opacity": 1,
+      "hidden": false,
+      "locked": false,
+      "layout": {
+        "mode": "absolute",
+        "gap": 0,
+        "padding": 0,
+        "align": "start",
+        "justify": "start"
+      },
+      "style": {
+        "font": {
+          "color": "primary"
+        }
+      },
+      "props": {
+        "name": "settings"
+      }
+    },
+    "n-24": {
+      "id": "n-24",
+      "type": "text",
+      "name": "设置文字",
+      "parent": "n-25",
+      "children": [],
+      "x": 0,
+      "y": 44,
+      "w": 78,
+      "h": 16,
+      "opacity": 1,
+      "hidden": false,
+      "locked": false,
+      "layout": {
+        "mode": "absolute",
+        "gap": 0,
+        "padding": 0,
+        "align": "start",
+        "justify": "start"
+      },
+      "style": {
+        "font": {
+          "size": "xs",
+          "color": "muted",
+          "align": "center"
+        }
+      },
+      "props": {
+        "text": "设置"
+      }
+    },
+    "n-25": {
+      "id": "n-25",
+      "type": "box",
+      "name": "设置",
+      "parent": "n-26",
+      "children": [
+        "n-23",
+        "n-24"
+      ],
+      "x": 270,
+      "y": 0,
+      "w": 78,
+      "h": 72,
+      "opacity": 1,
+      "hidden": false,
+      "locked": false,
+      "layout": {
+        "mode": "absolute",
+        "gap": 0,
+        "padding": 0,
+        "align": "start",
+        "justify": "start"
+      },
+      "style": {
+        "fill": "surface",
+        "radius": "md",
+        "stroke": {
+          "color": "border",
+          "width": 1
+        }
+      },
+      "props": {}
+    },
+    "n-26": {
+      "id": "n-26",
+      "type": "box",
+      "name": "快捷操作",
+      "parent": "n-54",
+      "children": [
+        "n-16",
+        "n-19",
+        "n-22",
+        "n-25"
+      ],
+      "x": 20,
+      "y": 300,
+      "w": 350,
+      "h": 72,
+      "opacity": 1,
+      "hidden": false,
+      "locked": false,
+      "layout": {
+        "mode": "row",
+        "gap": 12,
+        "padding": 0
+      },
+      "style": {},
+      "props": {}
+    },
+    "n-27": {
+      "id": "n-27",
+      "type": "text",
+      "name": "标题",
+      "parent": "n-54",
+      "children": [],
+      "x": 20,
+      "y": 396,
+      "w": 200,
+      "h": 24,
+      "opacity": 1,
+      "hidden": false,
+      "locked": false,
+      "layout": {
+        "mode": "absolute",
+        "gap": 0,
+        "padding": 0,
+        "align": "start",
+        "justify": "start"
+      },
+      "style": {
+        "font": {
+          "size": "lg",
+          "weight": 600,
+          "color": "text"
+        }
+      },
+      "props": {
+        "text": "最近交易"
+      }
+    },
+    "n-28": {
+      "id": "n-28",
+      "type": "text",
+      "name": "更多",
+      "parent": "n-54",
+      "children": [],
+      "x": 316,
+      "y": 400,
+      "w": 54,
+      "h": 18,
+      "opacity": 1,
+      "hidden": false,
+      "locked": false,
+      "layout": {
+        "mode": "absolute",
+        "gap": 0,
+        "padding": 0,
+        "align": "start",
+        "justify": "start"
+      },
+      "style": {
+        "font": {
+          "size": "xs",
+          "color": "primary"
+        }
+      },
+      "props": {
+        "text": "查看全部"
+      }
+    },
+    "n-29": {
+      "id": "n-29",
+      "type": "avatar",
+      "name": "头像",
+      "parent": "n-33",
+      "children": [],
+      "x": 0,
+      "y": 8,
+      "w": 40,
+      "h": 40,
+      "opacity": 1,
+      "hidden": false,
+      "locked": false,
+      "layout": {
+        "mode": "absolute",
+        "gap": 0,
+        "padding": 0,
+        "align": "start",
+        "justify": "start"
+      },
+      "style": {
+        "fill": "surface2"
+      },
+      "props": {
+        "initials": "工"
+      }
+    },
+    "n-30": {
+      "id": "n-30",
+      "type": "text",
+      "name": "名称",
+      "parent": "n-33",
+      "children": [],
+      "x": 52,
+      "y": 10,
+      "w": 190,
+      "h": 18,
+      "opacity": 1,
+      "hidden": false,
+      "locked": false,
+      "layout": {
+        "mode": "absolute",
+        "gap": 0,
+        "padding": 0,
+        "align": "start",
+        "justify": "start"
+      },
+      "style": {
+        "font": {
+          "size": "sm",
+          "weight": 600,
+          "color": "text"
+        }
+      },
+      "props": {
+        "text": "工资入账"
+      }
+    },
+    "n-31": {
+      "id": "n-31",
+      "type": "text",
+      "name": "备注",
+      "parent": "n-33",
+      "children": [],
+      "x": 52,
+      "y": 30,
+      "w": 210,
+      "h": 16,
+      "opacity": 1,
+      "hidden": false,
+      "locked": false,
+      "layout": {
+        "mode": "absolute",
+        "gap": 0,
+        "padding": 0,
+        "align": "start",
+        "justify": "start"
+      },
+      "style": {
+        "font": {
+          "size": "xs",
+          "color": "muted"
+        }
+      },
+      "props": {
+        "text": "今天 09:12 · 招商银行"
+      }
+    },
+    "n-32": {
+      "id": "n-32",
+      "type": "text",
+      "name": "金额",
+      "parent": "n-33",
+      "children": [],
+      "x": 240,
+      "y": 12,
+      "w": 78,
+      "h": 20,
+      "opacity": 1,
+      "hidden": false,
+      "locked": false,
+      "layout": {
+        "mode": "absolute",
+        "gap": 0,
+        "padding": 0,
+        "align": "start",
+        "justify": "start"
+      },
+      "style": {
+        "font": {
+          "size": "sm",
+          "weight": 600,
+          "color": "success",
+          "align": "right"
+        }
+      },
+      "props": {
+        "text": "+ ¥ 24,000"
+      }
+    },
+    "n-33": {
+      "id": "n-33",
+      "type": "box",
+      "name": "交易 1",
+      "parent": "n-44",
+      "children": [
+        "n-29",
+        "n-30",
+        "n-31",
+        "n-32"
+      ],
+      "x": 20,
+      "y": 16,
+      "w": 318,
+      "h": 56,
+      "opacity": 1,
+      "hidden": false,
+      "locked": false,
+      "layout": {
+        "mode": "absolute",
+        "gap": 0,
+        "padding": 0,
+        "align": "start",
+        "justify": "start"
+      },
+      "style": {
+        "fill": "transparent"
+      },
+      "props": {}
+    },
+    "n-34": {
+      "id": "n-34",
+      "type": "avatar",
+      "name": "头像",
+      "parent": "n-38",
+      "children": [],
+      "x": 0,
+      "y": 8,
+      "w": 40,
+      "h": 40,
+      "opacity": 1,
+      "hidden": false,
+      "locked": false,
+      "layout": {
+        "mode": "absolute",
+        "gap": 0,
+        "padding": 0,
+        "align": "start",
+        "justify": "start"
+      },
+      "style": {
+        "fill": "surface2"
+      },
+      "props": {
+        "initials": "星"
+      }
+    },
+    "n-35": {
+      "id": "n-35",
+      "type": "text",
+      "name": "名称",
+      "parent": "n-38",
+      "children": [],
+      "x": 52,
+      "y": 10,
+      "w": 190,
+      "h": 18,
+      "opacity": 1,
+      "hidden": false,
+      "locked": false,
+      "layout": {
+        "mode": "absolute",
+        "gap": 0,
+        "padding": 0,
+        "align": "start",
+        "justify": "start"
+      },
+      "style": {
+        "font": {
+          "size": "sm",
+          "weight": 600,
+          "color": "text"
+        }
+      },
+      "props": {
+        "text": "星巴克"
+      }
+    },
+    "n-36": {
+      "id": "n-36",
+      "type": "text",
+      "name": "备注",
+      "parent": "n-38",
+      "children": [],
+      "x": 52,
+      "y": 30,
+      "w": 210,
+      "h": 16,
+      "opacity": 1,
+      "hidden": false,
+      "locked": false,
+      "layout": {
+        "mode": "absolute",
+        "gap": 0,
+        "padding": 0,
+        "align": "start",
+        "justify": "start"
+      },
+      "style": {
+        "font": {
+          "size": "xs",
+          "color": "muted"
+        }
+      },
+      "props": {
+        "text": "昨天 18:40 · 餐饮"
+      }
+    },
+    "n-37": {
+      "id": "n-37",
+      "type": "text",
+      "name": "金额",
+      "parent": "n-38",
+      "children": [],
+      "x": 240,
+      "y": 12,
+      "w": 78,
+      "h": 20,
+      "opacity": 1,
+      "hidden": false,
+      "locked": false,
+      "layout": {
+        "mode": "absolute",
+        "gap": 0,
+        "padding": 0,
+        "align": "start",
+        "justify": "start"
+      },
+      "style": {
+        "font": {
+          "size": "sm",
+          "weight": 600,
+          "color": "text",
+          "align": "right"
+        }
+      },
+      "props": {
+        "text": "- ¥ 42.00"
+      }
+    },
+    "n-38": {
+      "id": "n-38",
+      "type": "box",
+      "name": "交易 2",
+      "parent": "n-44",
+      "children": [
+        "n-34",
+        "n-35",
+        "n-36",
+        "n-37"
+      ],
+      "x": 20,
+      "y": 88,
+      "w": 318,
+      "h": 56,
+      "opacity": 1,
+      "hidden": false,
+      "locked": false,
+      "layout": {
+        "mode": "absolute",
+        "gap": 0,
+        "padding": 0,
+        "align": "start",
+        "justify": "start"
+      },
+      "style": {
+        "fill": "transparent"
+      },
+      "props": {}
+    },
+    "n-39": {
+      "id": "n-39",
+      "type": "avatar",
+      "name": "头像",
+      "parent": "n-43",
+      "children": [],
+      "x": 0,
+      "y": 8,
+      "w": 40,
+      "h": 40,
+      "opacity": 1,
+      "hidden": false,
+      "locked": false,
+      "layout": {
+        "mode": "absolute",
+        "gap": 0,
+        "padding": 0,
+        "align": "start",
+        "justify": "start"
+      },
+      "style": {
+        "fill": "surface2"
+      },
+      "props": {
+        "initials": "基"
+      }
+    },
+    "n-40": {
+      "id": "n-40",
+      "type": "text",
+      "name": "名称",
+      "parent": "n-43",
+      "children": [],
+      "x": 52,
+      "y": 10,
+      "w": 190,
+      "h": 18,
+      "opacity": 1,
+      "hidden": false,
+      "locked": false,
+      "layout": {
+        "mode": "absolute",
+        "gap": 0,
+        "padding": 0,
+        "align": "start",
+        "justify": "start"
+      },
+      "style": {
+        "font": {
+          "size": "sm",
+          "weight": 600,
+          "color": "text"
+        }
+      },
+      "props": {
+        "text": "基金赎回"
+      }
+    },
+    "n-41": {
+      "id": "n-41",
+      "type": "text",
+      "name": "备注",
+      "parent": "n-43",
+      "children": [],
+      "x": 52,
+      "y": 30,
+      "w": 210,
+      "h": 16,
+      "opacity": 1,
+      "hidden": false,
+      "locked": false,
+      "layout": {
+        "mode": "absolute",
+        "gap": 0,
+        "padding": 0,
+        "align": "start",
+        "justify": "start"
+      },
+      "style": {
+        "font": {
+          "size": "xs",
+          "color": "muted"
+        }
+      },
+      "props": {
+        "text": "11月10日 · 理财"
+      }
+    },
+    "n-42": {
+      "id": "n-42",
+      "type": "text",
+      "name": "金额",
+      "parent": "n-43",
+      "children": [],
+      "x": 240,
+      "y": 12,
+      "w": 78,
+      "h": 20,
+      "opacity": 1,
+      "hidden": false,
+      "locked": false,
+      "layout": {
+        "mode": "absolute",
+        "gap": 0,
+        "padding": 0,
+        "align": "start",
+        "justify": "start"
+      },
+      "style": {
+        "font": {
+          "size": "sm",
+          "weight": 600,
+          "color": "success",
+          "align": "right"
+        }
+      },
+      "props": {
+        "text": "+ ¥ 3,600"
+      }
+    },
+    "n-43": {
+      "id": "n-43",
+      "type": "box",
+      "name": "交易 3",
+      "parent": "n-44",
+      "children": [
+        "n-39",
+        "n-40",
+        "n-41",
+        "n-42"
+      ],
+      "x": 20,
+      "y": 160,
+      "w": 318,
+      "h": 56,
+      "opacity": 1,
+      "hidden": false,
+      "locked": false,
+      "layout": {
+        "mode": "absolute",
+        "gap": 0,
+        "padding": 0,
+        "align": "start",
+        "justify": "start"
+      },
+      "style": {
+        "fill": "transparent"
+      },
+      "props": {}
+    },
+    "n-44": {
+      "id": "n-44",
+      "type": "card",
+      "name": "交易列表",
+      "parent": "n-54",
+      "children": [
+        "n-33",
+        "n-38",
+        "n-43"
+      ],
+      "x": 20,
+      "y": 428,
+      "w": 350,
+      "h": 252,
+      "opacity": 1,
+      "hidden": false,
+      "locked": false,
+      "layout": {
+        "mode": "absolute",
+        "gap": 0,
+        "padding": 0,
+        "align": "start",
+        "justify": "start"
+      },
+      "style": {
+        "fill": "surface",
+        "radius": "lg",
+        "stroke": {
+          "color": "border",
+          "width": 1
+        }
+      },
+      "props": {}
+    },
+    "n-45": {
+      "id": "n-45",
+      "type": "icon",
+      "name": "首页图标",
+      "parent": "n-53",
+      "children": [],
+      "x": 36,
+      "y": 14,
+      "w": 24,
+      "h": 24,
+      "opacity": 1,
+      "hidden": false,
+      "locked": false,
+      "layout": {
+        "mode": "absolute",
+        "gap": 0,
+        "padding": 0,
+        "align": "start",
+        "justify": "start"
+      },
+      "style": {
+        "font": {
+          "color": "primary"
+        }
+      },
+      "props": {
+        "name": "home"
+      }
+    },
+    "n-46": {
+      "id": "n-46",
+      "type": "text",
+      "name": "首页文字",
+      "parent": "n-53",
+      "children": [],
+      "x": 18,
+      "y": 46,
+      "w": 60,
+      "h": 14,
+      "opacity": 1,
+      "hidden": false,
+      "locked": false,
+      "layout": {
+        "mode": "absolute",
+        "gap": 0,
+        "padding": 0,
+        "align": "start",
+        "justify": "start"
+      },
+      "style": {
+        "font": {
+          "size": "xs",
+          "color": "primary",
+          "align": "center"
+        }
+      },
+      "props": {
+        "text": "首页"
+      }
+    },
+    "n-47": {
+      "id": "n-47",
+      "type": "icon",
+      "name": "统计图标",
+      "parent": "n-53",
+      "children": [],
+      "x": 134,
+      "y": 14,
+      "w": 24,
+      "h": 24,
+      "opacity": 1,
+      "hidden": false,
+      "locked": false,
+      "layout": {
+        "mode": "absolute",
+        "gap": 0,
+        "padding": 0,
+        "align": "start",
+        "justify": "start"
+      },
+      "style": {
+        "font": {
+          "color": "muted"
+        }
+      },
+      "props": {
+        "name": "chart"
+      }
+    },
+    "n-48": {
+      "id": "n-48",
+      "type": "text",
+      "name": "统计文字",
+      "parent": "n-53",
+      "children": [],
+      "x": 116,
+      "y": 46,
+      "w": 60,
+      "h": 14,
+      "opacity": 1,
+      "hidden": false,
+      "locked": false,
+      "layout": {
+        "mode": "absolute",
+        "gap": 0,
+        "padding": 0,
+        "align": "start",
+        "justify": "start"
+      },
+      "style": {
+        "font": {
+          "size": "xs",
+          "color": "muted",
+          "align": "center"
+        }
+      },
+      "props": {
+        "text": "统计"
+      }
+    },
+    "n-49": {
+      "id": "n-49",
+      "type": "icon",
+      "name": "消息图标",
+      "parent": "n-53",
+      "children": [],
+      "x": 232,
+      "y": 14,
+      "w": 24,
+      "h": 24,
+      "opacity": 1,
+      "hidden": false,
+      "locked": false,
+      "layout": {
+        "mode": "absolute",
+        "gap": 0,
+        "padding": 0,
+        "align": "start",
+        "justify": "start"
+      },
+      "style": {
+        "font": {
+          "color": "muted"
+        }
+      },
+      "props": {
+        "name": "message"
+      }
+    },
+    "n-50": {
+      "id": "n-50",
+      "type": "text",
+      "name": "消息文字",
+      "parent": "n-53",
+      "children": [],
+      "x": 214,
+      "y": 46,
+      "w": 60,
+      "h": 14,
+      "opacity": 1,
+      "hidden": false,
+      "locked": false,
+      "layout": {
+        "mode": "absolute",
+        "gap": 0,
+        "padding": 0,
+        "align": "start",
+        "justify": "start"
+      },
+      "style": {
+        "font": {
+          "size": "xs",
+          "color": "muted",
+          "align": "center"
+        }
+      },
+      "props": {
+        "text": "消息"
+      }
+    },
+    "n-51": {
+      "id": "n-51",
+      "type": "icon",
+      "name": "我的图标",
+      "parent": "n-53",
+      "children": [],
+      "x": 330,
+      "y": 14,
+      "w": 24,
+      "h": 24,
+      "opacity": 1,
+      "hidden": false,
+      "locked": false,
+      "layout": {
+        "mode": "absolute",
+        "gap": 0,
+        "padding": 0,
+        "align": "start",
+        "justify": "start"
+      },
+      "style": {
+        "font": {
+          "color": "muted"
+        }
+      },
+      "props": {
+        "name": "user"
+      }
+    },
+    "n-52": {
+      "id": "n-52",
+      "type": "text",
+      "name": "我的文字",
+      "parent": "n-53",
+      "children": [],
+      "x": 312,
+      "y": 46,
+      "w": 60,
+      "h": 14,
+      "opacity": 1,
+      "hidden": false,
+      "locked": false,
+      "layout": {
+        "mode": "absolute",
+        "gap": 0,
+        "padding": 0,
+        "align": "start",
+        "justify": "start"
+      },
+      "style": {
+        "font": {
+          "size": "xs",
+          "color": "muted",
+          "align": "center"
+        }
+      },
+      "props": {
+        "text": "我的"
+      }
+    },
+    "n-53": {
+      "id": "n-53",
+      "type": "box",
+      "name": "底部导航",
+      "parent": "n-54",
+      "children": [
+        "n-45",
+        "n-46",
+        "n-47",
+        "n-48",
+        "n-49",
+        "n-50",
+        "n-51",
+        "n-52"
+      ],
+      "x": 0,
+      "y": 764,
+      "w": 390,
+      "h": 80,
+      "opacity": 1,
+      "hidden": false,
+      "locked": false,
+      "layout": {
+        "mode": "absolute",
+        "gap": 0,
+        "padding": 0,
+        "align": "start",
+        "justify": "start"
+      },
+      "style": {
+        "fill": "surface",
+        "stroke": {
+          "color": "border",
+          "width": 0
+        }
+      },
+      "props": {}
+    },
+    "n-54": {
+      "id": "n-54",
+      "type": "box",
+      "name": "首页",
+      "parent": null,
+      "children": [
+        "n-05",
+        "n-13",
+        "n-26",
+        "n-27",
+        "n-28",
+        "n-44",
+        "n-53"
+      ],
+      "x": 0,
+      "y": 0,
+      "w": 390,
+      "h": 844,
+      "opacity": 1,
+      "hidden": false,
+      "locked": false,
+      "layout": {
+        "mode": "absolute",
+        "gap": 0,
+        "padding": 0,
+        "align": "start",
+        "justify": "start"
+      },
+      "style": {
+        "fill": "bg"
+      },
+      "props": {}
+    }
+  }
+}
